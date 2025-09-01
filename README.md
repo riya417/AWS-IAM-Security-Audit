@@ -25,11 +25,12 @@ It simulates a **real-world security compliance audit** by analyzing IAM users, 
 ---
 
 ## Sample Findings
-Username,MFA Enabled,Admin Access,Wildcard Policy,Last Used,Inactive >90 days
-admin_user,False,True,False,Active,False
-dev-user,True,False,False,Active,False
-inactive-user,False,False,False,Active,False
-read_only_user,True,False,False,Active,False
+| Username       | MFA Enabled | Admin Access | Wildcard Policy | Last Used | Inactive >90 Days | Risk Level     |
+|----------------|-------------|--------------|-----------------|-----------|-------------------|----------------|
+| admin_user     | ❌          | ✅           | ❌              | Active    | ❌                 | 🔴 High Risk   |
+| dev-user       | ✅          | ❌           | ❌              | Active    | ❌                 | 🟢 Low Risk    |
+| inactive-user  | ❌          | ❌           | ❌              | Active    | ❌                 | 🟡 Medium Risk |
+| read_only_user | ✅          | ❌           | ❌              | Active    | ❌                 | 🟢 Low Risk    |
 
 ---
 
